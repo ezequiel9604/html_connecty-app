@@ -4,134 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
-    
+    <title>Document</title>
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="../css/reset.css" />
-    <link rel="stylesheet" href="../css/home.css" />
-
-<script>
-
-let isOpen = false;
-
-window.addEventListener("load", function(){
-
-    const btn_hide = document.getElementById("btn_hide");
-
-    const main__sidebar = document.querySelector(".main__sidebar");
-
-    const main__section = document.querySelector(".main__section");
-
-    btn_hide.addEventListener("click", function () {
-        
-        if(!isOpen){
-            main__sidebar.style.left = "-16%";
-
-            main__section.style.left = "0%";
-            main__section.style.width = "100%";
-
-            isOpen = true;
-        }
-        else{
-            main__sidebar.style.left = "0%";
-
-            main__section.style.left = "16%";
-            main__section.style.width = "84%";
-
-            isOpen = false;
-        }
-
-    })
-
-})
-
-</script>
+    <link rel="stylesheet" href="../css/header.css" />
 
 </head>
 <body>
-
-
-<main class="base__container">
-
-<aside class="main__sidebar">
-
-    <div class="main__sidebar__header">
-        <i class="bi bi-bezier"></i>
-        <span>Connecty</span>
-    </div>
-
-    <div class="main__sidebar__logo">
-
-        <figure>
-            <img src="../images/user-image.jpg" alt="" />
-        </figure>
-        <h3>Linda Miller</h3>
-
-    </div>
-
-    <div class="main__sidebar__links">
-
-        <!-- links go here... -->
-
-    </div>
-
-    <div class="main__sidebar__footer">
-
-        <div class="main__sidebar__footer__container">
-            <button class="main__sidebar__footer__button">
-                <figure>
-                    <i class="bi bi-brightness-high"></i>
-                </figure>
     
-                <div class="main__sidebar__footer__button__dropdownMode">
-                    <a href="#">
-                        <i class="bi bi-moon-stars"></i>
-                        <p>Auto (System)</p>
-                    </a>
-                    <a href="#">
-                        <i class="bi bi-brightness-high"></i>
-                        <p>Light (Default)</p>
-                    </a>
-                    <a href="#">
-                        <i class="bi bi-moon"></i>
-                        <p>Dark</p>
-                    </a>
-                    
-                </div>
-                
-            </button>
-            <button class="main__sidebar__footer__button">
-                <figure><i class="bi bi-exclamation-circle"></i></figure>
-            </button>
-            <button class="main__sidebar__footer__button">
-                <figure><i class="bi bi-flag"></i></figure>
-
-                <!-- <div class="main__sidebar__footer__button__dropdownLang">
-                    <a href="#">
-                        <i class="bi bi-flag"></i>
-                        <p>English</p>
-                    </a>
-                    <a href="#">
-                        <i class="bi bi-flag"></i>
-                        <p>Spanish</p>
-                    </a>
-                    <a href="#">
-                        <i class="bi bi-flag"></i>
-                        <p>Deutsch</p>
-                    </a>
-                    
-                </div> -->
-                
-            </button>
-        </div>
-
-    </div>
-
-</aside>
-
-
-<section class="main__section">
-
     <header class="main__section__header">
 
         <div class="main__section__header__container">
@@ -222,30 +103,6 @@ window.addEventListener("load", function(){
             </div>
         </div>
     </header>
-
-    <section class="main__section__section">
-
-        <div class="main__section__section__greetings">
-
-            <div class="main__section__section__greetings__container">
-                <h2>Welcome back, John!</h2>
-                <h4>You have 3 new notifications.</h4>
-            </div>
-    
-        </div>
-
-        <div class="main__section__section__stats">
-
-
-
-        </div>
-        
-
-    </section>
-
-</section>
-
-</main>
 
 </body>
 </html>

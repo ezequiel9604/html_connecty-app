@@ -1,23 +1,4 @@
 
-@mixin header-icon-button {
-    width: 35px;
-    height: 35px;
-    border: 1px solid;
-    border-radius: 50%;
-    outline: none;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    cursor: pointer;
-    background-color: transparent;
-    transition: background-color 0.4s ease-in-out;
-
-    &:hover{
-        background-color: #f1f1f1;
-    }
-}
 
 @mixin sidebar-icon-button {
     width: 30px;
@@ -95,6 +76,26 @@
     }
 }
 
+@mixin header-icon-button {
+    width: 35px;
+    height: 35px;
+    border: 1px solid;
+    border-radius: 50%;
+    outline: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    cursor: pointer;
+    background-color: transparent;
+    transition: background-color 0.4s ease-in-out;
+
+    &:hover{
+        background-color: #f1f1f1;
+    }
+}
+
 @mixin header-button-dropdownSetting{
 
     border: 1px solid #ccc;
@@ -103,7 +104,7 @@
     width: 150px;
 
     position: absolute;
-    top: 100%;
+    top: 90%;
     right: 0;
 
     animation-name: "dropdown-animations";
@@ -195,7 +196,7 @@
     width: 320px;
 
     position: absolute;
-    top: 140%;
+    top: 130%;
     right: 0;
 
     animation-name: "dropdown-animations";
@@ -277,7 +278,6 @@
     }
 
 }
-
 
 
 html, body { 
@@ -416,8 +416,6 @@ html, body {
 }
 
 
-
-
 .main__section{
     // border: 1px solid blue;
     height: 100%;
@@ -438,6 +436,12 @@ html, body {
         display: flex;
         justify-content: center;
         align-items: center;
+
+        position: sticky;
+        top: 0;
+        left: 0;
+
+        z-index: 10;
 
         &__container{
             //border: 1px solid blue;
@@ -562,24 +566,20 @@ html, body {
 
     &__section{
         width: 100%;
-        height: 660px;
 
-        background-color: #eee;
         overflow-y: auto;
         z-index: 5;
 
         position: relative;
+        background: linear-gradient(to bottom, #3b7ddd 0%, #3b7ddd 30%, #eee 30%, #eee 100%);
 
         &__greetings{
-            border: 1px solid red;
             width: 100%;
             background-color: transparent;
             overflow: hidden;
-            z-index: 5;
     
             &__container{
-                border: 1px solid blue;
-                width: 90%;
+                width: 94%;
                 margin: 40px auto;
     
                 h2{
@@ -589,6 +589,7 @@ html, body {
     
                     font-size: 2em;
                     font-weight: bold;
+                    color: #ffffff;
                 }
     
                 h4{
@@ -596,37 +597,24 @@ html, body {
                     display: block;
     
                     font-size: 1em;
+                    color: #ffffff;
                 }
             }
         }
 
         &__stats{
             border: 1px solid;
-            width: 90%;
-            margin: 0px auto;
+            width: 94%;
+            height: 700px;
+            margin: 20px auto;
+
+            background-color: transparent;
+
+
+
+
         }
 
-    }
-
-
-    &__footer{
-        width: 100%;
-
-        background-color: #eee;
-
-        position: absolute;
-        bottom: 0;
-        left: 0;
-
-        address{
-            display: block;
-            width: fit-content;
-            margin: 10px 0;
-            margin-left: 25px;
-
-            font-size: 1em;
-            color: #4d4d4d;
-        }
     }
 
 

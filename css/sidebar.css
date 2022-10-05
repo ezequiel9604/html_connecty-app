@@ -1,0 +1,202 @@
+.main__sidebar {
+  width: 16%;
+  height: 100%;
+  position: fixed;
+  left: 0%;
+  transition: left 0.4s ease-in-out;
+  background-color: #ffffff;
+}
+.main__sidebar__header {
+  width: 100%;
+  height: 70px;
+  background-color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+}
+.main__sidebar__header i {
+  font-size: 1.5em;
+}
+.main__sidebar__header span {
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+.main__sidebar__logo {
+  border: 1px solid;
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+.main__sidebar__logo figure {
+  width: 75px;
+  height: 75px;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+.main__sidebar__logo figure img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.main__sidebar__logo h3 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 20px;
+  font-size: 1em;
+  font-weight: bold;
+}
+.main__sidebar__links {
+  border: 1px solid;
+  width: 90%;
+  height: 65%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.main__sidebar__footer {
+  width: 100%;
+  border-top: 1px solid #cccccc;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: transparent;
+}
+.main__sidebar__footer__container {
+  width: 60%;
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main__sidebar__footer__button {
+  border: 1px solid;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: transparent;
+  transition: background-color 0.4s ease-in-out;
+}
+.main__sidebar__footer__button:hover {
+  background-color: #f1f1f1;
+}
+.main__sidebar__footer__button i {
+  font-size: 0.8em;
+}
+.main__sidebar__footer__button__dropdownMode {
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  padding: 4px 0;
+  width: 160px;
+  position: absolute;
+  bottom: 90%;
+  background-color: #ffffff;
+  z-index: 90;
+  -webkit-animation-name: sidebar-button-dropdown-animations;
+          animation-name: sidebar-button-dropdown-animations;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  left: -40px;
+}
+@-webkit-keyframes sidebar-button-dropdown-animations {
+  from {
+    bottom: 90%;
+  }
+  to {
+    bottom: 120%;
+  }
+}
+@keyframes sidebar-button-dropdown-animations {
+  from {
+    bottom: 90%;
+  }
+  to {
+    bottom: 120%;
+  }
+}
+.main__sidebar__footer__button__dropdownMode a {
+  width: 92%;
+  margin: 0 auto;
+  border-radius: 4px;
+  margin: 5px auto;
+  box-sizing: border-box;
+  display: flex;
+  padding: 10px 16px;
+}
+.main__sidebar__footer__button__dropdownMode a:hover {
+  background-color: #f1f1f1;
+}
+.main__sidebar__footer__button__dropdownMode a i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+  color: #4d4d4d;
+}
+.main__sidebar__footer__button__dropdownMode a p {
+  margin-left: 10px;
+  font-size: 0.8em;
+  text-align: left;
+  color: #4d4d4d;
+}
+.main__sidebar__footer__button__dropdownLang {
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  padding: 4px 0;
+  width: 120px;
+  position: absolute;
+  bottom: 90%;
+  background-color: #ffffff;
+  z-index: 90;
+  -webkit-animation-name: sidebar-button-dropdown-animations;
+          animation-name: sidebar-button-dropdown-animations;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  right: -50px;
+}
+@keyframes sidebar-button-dropdown-animations {
+  from {
+    bottom: 90%;
+  }
+  to {
+    bottom: 120%;
+  }
+}
+.main__sidebar__footer__button__dropdownLang a {
+  width: 92%;
+  margin: 0 auto;
+  border-radius: 4px;
+  margin: 5px auto;
+  box-sizing: border-box;
+  display: flex;
+  padding: 10px 16px;
+}
+.main__sidebar__footer__button__dropdownLang a:hover {
+  background-color: #f1f1f1;
+}
+.main__sidebar__footer__button__dropdownLang a i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+  color: #4d4d4d;
+}
+.main__sidebar__footer__button__dropdownLang a p {
+  margin-left: 10px;
+  font-size: 0.8em;
+  text-align: left;
+  color: #4d4d4d;
+}/*# sourceMappingURL=sidebar.css.map */

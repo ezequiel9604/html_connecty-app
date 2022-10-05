@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+
+<script>
+
+let isOpen = false;
+
+window.addEventListener("load", function(){
+
+    const btn_hide = document.getElementById("btn_hide");
+
+    const main__sidebar = document.querySelector(".main__sidebar");
+
+    const main__section = document.querySelector(".main__section");
+
+    btn_hide.addEventListener("click", function () {
+        
+        if(!isOpen){
+            main__sidebar.style.left = "-16%";
+
+            main__section.style.left = "0%";
+            main__section.style.width = "100%";
+
+            isOpen = true;
+        }
+        else{
+            main__sidebar.style.left = "0%";
+
+            main__section.style.left = "16%";
+            main__section.style.width = "84%";
+
+            isOpen = false;
+        }
+
+    })
+
+})
+
+</script>
+
+</head>
+<body>
+
+
+<main class="base__container">
+
+    <aside class="main__sidebar">
+
+        <!-- sidebar content goes here... -->
+
+    </aside>
+
+
+    <section class="main__section">
+
+        <header class="main__section__header">
+
+            <button id="btn_hide">hide</button>
+
+            <!-- header content goes here... -->
+
+        </header>
+
+        <section class="main__section__section">
+
+            <!-- section content goes here... -->
+
+        </section>
+
+    </section>
+
+</main>
+
+</body>
+</html>
