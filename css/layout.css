@@ -12,7 +12,7 @@
 }
 
 .main__sidebar {
-  width: 16%;
+  width: 15%;
   height: 100%;
   position: fixed;
   left: 0%;
@@ -23,8 +23,8 @@
 .main__section {
   height: 100%;
   position: relative;
-  width: 84%;
-  left: 16%;
+  width: 85%;
+  left: 15%;
   transition: all 0.4s ease-in-out;
   z-index: 5;
 }

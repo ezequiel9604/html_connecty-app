@@ -1,7 +1,19 @@
-.main__section__header {
+@font-face {
+  font-family: "SourceSansPro_light";
+  src: url("../fonts/SourceSansPro-Light.ttf");
+}
+@font-face {
+  font-family: "SourceSansPro_Regular";
+  src: url("../fonts/SourceSansPro-Regular.ttf");
+}
+@font-face {
+  font-family: "SourceSansPro_SemiBold";
+  src: url("../fonts/SourceSansPro-SemiBold.ttf");
+}
+.main__header {
   width: 100%;
-  height: 70px;
-  background-color: #ccc;
+  height: 60px;
+  background-color: #3b7ddd;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,29 +23,40 @@
   left: 0;
   z-index: 10;
 }
-.main__section__header__container {
+@media screen and (max-width: 834px) {
+  .main__header {
+    height: 50px;
+  }
+}
+.main__header__container {
   width: 96%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.main__section__header__container__hide__search {
+.main__header__container__hideSearch {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  box-sizing: border-box;
   display: flex;
+  justify-content: none;
   align-items: center;
 }
-.main__section__header__container__hide__search__hide {
+.main__header__container__hideSearch__buttons {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.main__section__header__container__hide__search__hide button {
+.main__header__container__hideSearch__buttons button {
   width: 35px;
   height: 35px;
-  border: 1px solid;
+  border: none;
   border-radius: 50%;
   outline: none;
   display: flex;
@@ -43,41 +66,82 @@
   background-color: transparent;
   transition: background-color 0.4s ease-in-out;
 }
-.main__section__header__container__hide__search__hide button:hover {
-  background-color: #f1f1f1;
-}
-.main__section__header__container__hide__search__hide button i {
+.main__header__container__hideSearch__buttons button i {
   display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 1.2em;
+  color: #f1f1f1;
 }
-.main__section__header__container__hide__search__search {
+.main__header__container__hideSearch__buttons button i:hover {
+  color: #ffffff;
+}
+@media screen and (max-width: 834px) {
+  .main__header__container__hideSearch__buttons button i {
+    font-size: 1em;
+  }
+}
+@media screen and (max-width: 834px) {
+  .main__header__container__hideSearch__buttons button i {
+    font-size: 0.9em;
+  }
+}
+.main__header__container__hideSearch__buttons button:last-child {
+  display: none;
+}
+.main__header__container__hideSearch__search {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   margin-left: 20px;
 }
-.main__section__header__container__hide__search__search input {
+@media screen and (max-width: 428px) {
+  .main__header__container__hideSearch__search {
+    margin-left: 10px;
+  }
+}
+.main__header__container__hideSearch__search input {
   border: 1px solid #ffffff;
-  width: 700px;
-  box-sizing: border-box;
-  font-size: 1em;
-  padding: 6px 10px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: 700px;
+  font-size: 1em;
+  font-family: "SourceSansPro_Regular";
+  padding: 6px 10px;
   outline: none;
 }
-.main__section__header__container__settings {
+@media screen and (max-width: 1024px) {
+  .main__header__container__hideSearch__search input {
+    width: 600px;
+  }
+}
+@media screen and (max-width: 834px) {
+  .main__header__container__hideSearch__search input {
+    width: 500px;
+    font-size: 0.9em;
+    padding: 4px 8px;
+  }
+}
+@media screen and (max-width: 428px) {
+  .main__header__container__hideSearch__search input {
+    width: 260px;
+    font-size: 0.8em;
+    padding: 2px 6px;
+  }
+}
+.main__header__container__settings {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  box-sizing: border-box;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.main__section__header__container__settings button:last-child {
-  margin-left: 30px;
-}
-.main__section__header__container__settings button {
+.main__header__container__settings button {
   width: 35px;
   height: 35px;
-  border: 1px solid;
+  border: none;
   border-radius: 50%;
   outline: none;
   display: flex;
@@ -88,49 +152,85 @@
   transition: background-color 0.4s ease-in-out;
   position: relative;
 }
-.main__section__header__container__settings button:hover {
-  background-color: #f1f1f1;
+.main__header__container__settings button i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  color: #f1f1f1;
 }
-.main__section__header__container__settings button:hover > span {
+.main__header__container__settings button i:hover {
+  color: #ffffff;
+}
+@media screen and (max-width: 834px) {
+  .main__header__container__settings button i {
+    font-size: 1em;
+  }
+}
+@media screen and (max-width: 834px) {
+  .main__header__container__settings button i {
+    font-size: 0.9em;
+  }
+}
+.main__header__container__settings button:hover > span {
   top: -25px;
 }
-.main__section__header__container__settings button > i {
-  display: flex;
-  font-size: 1.2em;
+.main__header__container__settings button:last-child {
+  margin-left: 20px;
 }
-.main__section__header__container__settings button > span {
+@media screen and (max-width: 428px) {
+  .main__header__container__settings button:last-child {
+    margin-left: 10px;
+  }
+}
+.main__header__container__settings button span {
   display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   top: -20px;
   right: -20px;
   transition: top 0.2s ease-in-out;
 }
-.main__section__header__container__settings button > span i {
+@media screen and (max-width: 428px) {
+  .main__header__container__settings button span {
+    top: -12px;
+    right: -10px;
+  }
+}
+.main__header__container__settings button span i {
   display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 3.2em;
+}
+@media screen and (max-width: 428px) {
+  .main__header__container__settings button span i {
+    font-size: 2.4em;
+  }
 }
 @-webkit-keyframes dropdown-animations {
   from {
-    top: 100%;
+    top: 140%;
   }
   to {
-    top: 140%;
+    top: 100%;
   }
 }
 @keyframes dropdown-animations {
   from {
-    top: 100%;
-  }
-  to {
     top: 140%;
   }
+  to {
+    top: 100%;
+  }
 }
-.main__section__header__container__settings__dropdownNotifications {
+.main__header__container__settings__dropdownNotifications {
   border: 1px solid #ccc;
   border-radius: 4px;
   width: 320px;
   position: absolute;
-  top: 130%;
+  top: 140%;
   right: 0;
   -webkit-animation-name: "dropdown-animations";
           animation-name: "dropdown-animations";
@@ -140,70 +240,164 @@
           animation-duration: 0.4s;
   background-color: #ffffff;
   z-index: 90;
+  box-shadow: 0 2px 4px rgba(126, 142, 177, 0.12);
 }
-.main__section__header__container__settings__dropdownNotifications header {
+@media screen and (max-width: 834px) {
+  .main__header__container__settings__dropdownNotifications {
+    width: 280px;
+    right: 0%;
+  }
+}
+@media screen and (max-width: 428px) {
+  .main__header__container__settings__dropdownNotifications {
+    width: 220px;
+    right: 0%;
+  }
+}
+.main__header__container__settings__dropdownNotifications header {
   width: 100%;
   border-bottom: 1px solid #ccc;
   font-size: 0.9em;
+  font-family: "SourceSansPro_SemiBold";
   text-align: center;
   padding: 10px 0;
   cursor: default;
 }
-.main__section__header__container__settings__dropdownNotifications section {
+@media screen and (max-width: 834px) {
+  .main__header__container__settings__dropdownNotifications header {
+    font-size: 0.8em;
+  }
+}
+@media screen and (max-width: 428px) {
+  .main__header__container__settings__dropdownNotifications header {
+    font-size: 0.7em;
+    padding: 8px 0;
+  }
+}
+.main__header__container__settings__dropdownNotifications section {
   width: 100%;
   box-sizing: border-box;
 }
-.main__section__header__container__settings__dropdownNotifications section a {
+.main__header__container__settings__dropdownNotifications section a {
+  width: 100%;
+  box-sizing: border-box;
   border-bottom: 1px solid #ccc;
+  padding: 20px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
 }
-.main__section__header__container__settings__dropdownNotifications section a:hover {
-  background-color: #f1f1f1;
+.main__header__container__settings__dropdownNotifications section a:hover {
+  background-color: #fafafa;
 }
-.main__section__header__container__settings__dropdownNotifications section a i {
+@media screen and (max-width: 834px) {
+  .main__header__container__settings__dropdownNotifications section a {
+    padding: 16px;
+  }
+}
+@media screen and (max-width: 428px) {
+  .main__header__container__settings__dropdownNotifications section a {
+    padding: 10px;
+  }
+}
+.main__header__container__settings__dropdownNotifications section a i {
   width: 20%;
   font-size: 1em;
+  font-family: "SourceSansPro_SemiBold";
   color: #4d4d4d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.main__section__header__container__settings__dropdownNotifications section a article {
+@media screen and (max-width: 834px) {
+  .main__header__container__settings__dropdownNotifications section a i {
+    font-size: 0.9em;
+  }
+}
+@media screen and (max-width: 428px) {
+  .main__header__container__settings__dropdownNotifications section a i {
+    font-size: 0.8em;
+  }
+}
+.main__header__container__settings__dropdownNotifications section a article {
   width: 80%;
   box-sizing: border-box;
 }
-.main__section__header__container__settings__dropdownNotifications section a article p {
+.main__header__container__settings__dropdownNotifications section a article p {
   width: 100%;
   margin-bottom: 10px;
   font-size: 0.9em;
+  font-family: "SourceSansPro_SemiBold";
   text-align: left;
   color: #4d4d4d;
 }
-.main__section__header__container__settings__dropdownNotifications section a article time {
+@media screen and (max-width: 834px) {
+  .main__header__container__settings__dropdownNotifications section a article p {
+    margin-bottom: 6px;
+    font-size: 0.8em;
+  }
+}
+@media screen and (max-width: 428px) {
+  .main__header__container__settings__dropdownNotifications section a article p {
+    margin-bottom: 4px;
+    font-size: 0.7em;
+  }
+}
+.main__header__container__settings__dropdownNotifications section a article time {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   display: block;
   font-size: 0.7em;
+  font-family: "SourceSansPro_SemiBold";
   text-align: left;
   color: #4d4d4d;
 }
-.main__section__header__container__settings__dropdownNotifications footer {
+@media screen and (max-width: 834px) {
+  .main__header__container__settings__dropdownNotifications section a article time {
+    font-size: 0.6em;
+  }
+}
+@media screen and (max-width: 428px) {
+  .main__header__container__settings__dropdownNotifications section a article time {
+    font-size: 0.5em;
+  }
+}
+.main__header__container__settings__dropdownNotifications footer {
   width: 100%;
   box-sizing: border-box;
   text-align: center;
   padding: 6px 0;
 }
-.main__section__header__container__settings__dropdownNotifications footer a {
+.main__header__container__settings__dropdownNotifications footer a {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   color: #4d4d4d;
   font-size: 0.8em;
+  font-family: "SourceSansPro_SemiBold";
 }
-.main__section__header__container__settings__dropdownSettings {
+@media screen and (max-width: 834px) {
+  .main__header__container__settings__dropdownNotifications footer a {
+    font-size: 0.7em;
+  }
+}
+@media screen and (max-width: 428px) {
+  .main__header__container__settings__dropdownNotifications footer a {
+    font-size: 0.6em;
+  }
+}
+@media screen and (max-width: 834px) {
+  .main__header__container__settings__dropdownNotifications footer {
+    padding: 4px 0;
+  }
+}
+.main__header__container__settings__dropdownSettings {
   border: 1px solid #ccc;
   border-radius: 4px;
   width: 150px;
   position: absolute;
-  top: 90%;
+  top: 140%;
   right: 0;
   -webkit-animation-name: "dropdown-animations";
           animation-name: "dropdown-animations";
@@ -213,22 +407,29 @@
           animation-duration: 0.4s;
   background-color: #ffffff;
   z-index: 90;
+  box-shadow: 0 2px 4px rgba(126, 142, 177, 0.12);
 }
-.main__section__header__container__settings__dropdownSettings section {
+@media screen and (max-width: 834px) {
+  .main__header__container__settings__dropdownSettings {
+    width: 120px;
+  }
+}
+.main__header__container__settings__dropdownSettings section {
   width: 100%;
   margin: 6px 0;
-}
-.main__section__header__container__settings__dropdownSettings section a {
   box-sizing: border-box;
+}
+.main__header__container__settings__dropdownSettings section a {
+  box-sizing: border-box;
+  padding: 8px 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 8px 0;
 }
-.main__section__header__container__settings__dropdownSettings section a:hover {
-  background-color: #f1f1f1;
+.main__header__container__settings__dropdownSettings section a:hover {
+  background-color: #fafafa;
 }
-.main__section__header__container__settings__dropdownSettings section a i {
+.main__header__container__settings__dropdownSettings section a i {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -236,17 +437,30 @@
   font-size: 1.2em;
   color: #4d4d4d;
 }
-.main__section__header__container__settings__dropdownSettings section a p {
+@media screen and (max-width: 834px) {
+  .main__header__container__settings__dropdownSettings section a i {
+    font-size: 1em;
+  }
+}
+.main__header__container__settings__dropdownSettings section a p {
   width: 60%;
   font-size: 0.9em;
+  font-family: "SourceSansPro_Regular";
   text-align: left;
   color: #4d4d4d;
 }
-.main__section__header__container__settings__dropdownSettings footer {
+@media screen and (max-width: 834px) {
+  .main__header__container__settings__dropdownSettings section a p {
+    font-size: 0.8em;
+  }
+}
+.main__header__container__settings__dropdownSettings footer {
   width: 100%;
   border-top: 1px solid #ccc;
+  box-sizing: border-box;
 }
-.main__section__header__container__settings__dropdownSettings footer a {
+.main__header__container__settings__dropdownSettings footer a {
+  width: 100%;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -254,10 +468,10 @@
   padding: 6px 0;
   margin: 4px 0;
 }
-.main__section__header__container__settings__dropdownSettings footer a:hover {
+.main__header__container__settings__dropdownSettings footer a:hover {
   background-color: #f1f1f1;
 }
-.main__section__header__container__settings__dropdownSettings footer a i {
+.main__header__container__settings__dropdownSettings footer a i {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -265,9 +479,19 @@
   font-size: 1.2em;
   color: #4d4d4d;
 }
-.main__section__header__container__settings__dropdownSettings footer a p {
+@media screen and (max-width: 834px) {
+  .main__header__container__settings__dropdownSettings footer a i {
+    font-size: 1em;
+  }
+}
+.main__header__container__settings__dropdownSettings footer a p {
   width: 60%;
   font-size: 0.9em;
   text-align: left;
   color: #4d4d4d;
+}
+@media screen and (max-width: 834px) {
+  .main__header__container__settings__dropdownSettings footer a p {
+    font-size: 0.8em;
+  }
 }/*# sourceMappingURL=header.css.map */
